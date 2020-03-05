@@ -13,16 +13,13 @@ v2.2
 Demis D. John, Univ. of California Santa Barbara, 2019-04-12
 '''
 
-mc_DEBUG = False     # Print debugging info to the console?
+mc_DEBUG = True     # Print debugging info to the console?
 
 ## Import some modules:
 from ij import IJ, ImagePlus, WindowManager
 from ij.gui import GenericDialog, YesNoCancelDialog
 
 import sys, os
-
-
-
 
 # add the path to this script, so we can find the user-settings
 libpth = os.path.split(  os.path.split( sys.path[0] )[0]  )[0]  # path to Fiji folder

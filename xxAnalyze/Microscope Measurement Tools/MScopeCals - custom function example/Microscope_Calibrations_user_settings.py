@@ -25,10 +25,8 @@ Microscope scaling/pixel-size calibration settings.
 
 # Custom Function: Load JEOL SEM autocal class from a file:
 from JEOL_SEM_AutoCal   import JEOL_SEM_CalFromTxt
-from JPH_SEM_AutoCal   import JPH_SEM_CalFromTxt
-
 jeol_sem_cal_from_txt = JEOL_SEM_CalFromTxt()    # instantiate the class
-jph_sem_cal_from_txt = JPH_SEM_CalFromTxt()    # instantiate the class
+
 
 names = [
         'FluoroScope 5x', 
@@ -37,8 +35,7 @@ names = [
         'FluoroScope 100x', 
         'FluoroScope 150x',
         'Olympus DUV 100x',
-        jeol_sem_cal_from_txt, # instance of class with custom function `MyClass.cal()` for setting image scale.
-		jph_sem_cal_from_txt, # placeholder for custom function
+        jeol_sem_cal_from_txt,   # instance of class with custom function `MyClass.cal()` for setting image scale.
         ]
 
 
@@ -51,7 +48,6 @@ cals = [
         13.5333,
         54.6875,
         jeol_sem_cal_from_txt,  # placeholder for custom function
-		jph_sem_cal_from_txt, # placeholder for custom function
         ]
 #   This is just 1/pixel_width, in case you were wondering.
 
@@ -65,7 +61,6 @@ units = [
         'um',
         'um',
         jeol_sem_cal_from_txt,
-		jph_sem_cal_from_txt,
         ]
 # for identical units for all cals, use the following line instead (uncomment):
 #units = ['um'    for x in cals]    # list-comprehension with constant `um`
@@ -82,10 +77,13 @@ aspect_ratio = [
         1,
         1,
         jeol_sem_cal_from_txt,
-		jph_sem_cal_from_txt,
                 ]
 # The following sets the aspect ratio to 1 for all calibrations (uncomment to use):
 #aspect_ratio =  [ 1.0    for x in cals ]   # list-comprehension with constant `1`
+
+
+
+
 
 """
 ################################
